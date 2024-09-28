@@ -8,6 +8,7 @@
 .bash_logout
 .bash_profile
 .bashrc
+.git-credentials
 .gitconfig
 .lesshst
 .wget-hsts
