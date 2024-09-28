@@ -3,6 +3,10 @@ from database.db import connectionSQL, add_user
 
 app = Flask(__name__)
 
+@app.route('/')
+def home_page():
+    return render_template("home.html")
+
 @app.route('/register_page')
 def register():
     return render_template("register.html")
@@ -20,4 +24,4 @@ def register_user():
 if __name__ == "__main__":
     ip = "172.31.20.248"
     port = "80"
-    app.run(ip, port)
+    app.run(ip, port, debug=True)
