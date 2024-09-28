@@ -11,7 +11,7 @@ def register():
 def register_user():
     data_user = request.form
     id = data_user["id"]
-    name = data_user["naem"]
+    name = data_user["name"]
     lastname = data_user["lastname"]
     birthday = data_user["birthday"]
     add_user(id, name, lastname, birthday)

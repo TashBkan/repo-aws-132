@@ -19,9 +19,10 @@ def connectionSQL():
 
 def add_user(id, name, lastname, birtthday):
     try:
-        instruction_sql = "INSERT INTO db_users.user (id, name, lastname, birthday) VALUES("+id+", '"+name+"','"+lastname+"','"+birtthday+"');"
+        instruction_sql = "INSERT INTO db_users.users (id, name, lastname, birthday) VALUES("+id+", '"+name+"','"+lastname+"','"+birtthday+"');"
         object_connect = connectionSQL()
-        object_connect.cursor().execute(instruction_sql).commit()
+        object_connect.cursor().execute(instruction_sql)
+        object_connect.commit()
         print("The user was added")
     except Exception as err:
         print("Error:", err)
