@@ -23,7 +23,7 @@ def register_user():
     photo = data_photo["photo"]
     confirm = add_user(id, name, lastname, birthday)
     if confirm:
-        photo_path, photo_name = save_file(photo)
+        photo_path, photo_name = save_file(photo, id)
         upload_file(photo_path, photo_name)
         return "User added"
     else:

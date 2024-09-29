@@ -8,8 +8,8 @@ def connectionS3():
     print('succesfull connection to s3')
     return session_s3
 
-def save_file(photo):
-    photo_name = "photo.jpg"
+def save_file(photo, id):
+    photo_name = id  + ".jpg"
     photo_path = "/tmp" + photo_name
     photo.save(photo_path)
     print("Photo saved")
