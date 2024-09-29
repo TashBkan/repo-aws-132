@@ -24,5 +24,7 @@ def add_user(id, name, lastname, birtthday):
         object_connect.cursor().execute(instruction_sql)
         object_connect.commit()
         print("The user was added")
+        return True
     except Exception as err:
         print("Error:", err)
+        return False

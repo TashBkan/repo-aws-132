@@ -1,9 +1,12 @@
+__pycache__/
 .cache/
 .dotnet/
 .git/
 .local/
 .ssh/
 .vscode-server/
+controllers/__pycache__/
+database/__pycache__/
 .bash_history
 .bash_logout
 .bash_profile
@@ -12,3 +15,4 @@
 .gitconfig
 .lesshst
 .wget-hsts
+keys.py
