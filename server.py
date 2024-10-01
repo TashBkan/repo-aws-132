@@ -12,6 +12,10 @@ def home_page():
 def register():
     return render_template("register.html")
 
+@app.route('/consult_page')
+def consult():
+    return render_template("consult.html")    
+
 @app.route('/register_user', methods=["post"])
 def register_user():
     data_user = request.form
