@@ -28,3 +28,17 @@ def add_user(id, name, lastname, birtthday):
     except Exception as err:
         print("Error:", err)
         return False
+
+def consult_user(id):
+    try:
+        instruction_sql = "SELECT * FROM db_users.users WHERE id="+id+";"
+        object_connect = connectionSQL()
+        cursor = object_connect.cursor()
+        cursor.execute(instruction_sql)
+        result_data = cursor.fetchall()
+        print("User consulted")
+        return result_data
+    except Exception as err:
+        print("Error:", err)
+        return False
+

@@ -7,6 +7,7 @@ __pycache__/
 .vscode-server/
 controllers/__pycache__/
 database/__pycache__/
+routes/__pycache__/
 .bash_history
 .bash_logout
 .bash_profile
