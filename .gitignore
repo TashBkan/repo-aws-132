@@ -1,5 +1,6 @@
 __pycache__/
 .cache/
+.docker/
 .dotnet/
 .git/
 .local/
@@ -12,6 +13,7 @@ routes/__pycache__/
 .bash_logout
 .bash_profile
 .bashrc
+.dockerignore
 .git-credentials
 .gitconfig
 .lesshst

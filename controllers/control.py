@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-from database.db import *
+from flask import Flask, render_template, request, jsonify
+from database.db import connectionSQL, add_user, consult_user
 from controllers.admin_s3 import *
 from server import app
 
@@ -28,8 +28,13 @@ def func_register_user():
 def func_consult():
     return render_template("consult.html")
 
-def func_consult_user(id):
+def func_consult_user():
     id = request.get_json()
     result_data = consult_user(id)
     print(result_data)
-    return "oK"
+    obj_data = {
+        'name':result_data[0][1],
+        'lastname':result_data[0][2],
+        'birthday':result_data[0][3]
+    }
+    return jsonify(obj_data)

@@ -1,3 +1,4 @@
+from flask import request
 from server import app
 from controllers.control import *
 
@@ -19,5 +20,5 @@ def consult():
 
 @app.route('/consult_user', methods=["post"])
 def consult_user():
-    print(request.get_json)
+    print(request.get_json())
     return func_consult_user()
